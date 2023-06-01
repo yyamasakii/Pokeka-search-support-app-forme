@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 
 // const knex = require("./data/index");
-const environment = process.env.NODE_ENV || "development";
+const environment = process.env.DATABASE_URL ? "production" : "development";
 const config = require("./data/knexfile")[environment];
 const knex = require("knex")(config);
 

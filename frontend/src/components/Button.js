@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/button.css";
 // import _ from "lodash";
 const URL =
-	process.env.NODE_ENV === "production"
+	process.env.DATABASE_URL !== undefined
 		? `https://pssa-u9wj.onrender.com/api/poke`
 		: "http://localhost:8080/api/poke";
 

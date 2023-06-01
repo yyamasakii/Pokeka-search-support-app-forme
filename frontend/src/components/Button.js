@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/button.css";
 // import _ from "lodash";
-const URL = process.env.NODE_ENV
+const URL = process.env.DATABASE_URL
 	? `${process.env.DATABASE_URL}/api/poke`
 	: "http://localhost:8080/api/poke";
+
 export default function Button(props) {
 	const getAllPoke = async () => {
 		let result = [];

@@ -2,7 +2,10 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
-const knex = require("./data/index");
+// const knex = require("./data/index");
+const environment = process.env.NODE_ENV || "development";
+const config = require("./data/knexfile")[environment];
+const knex = require("knex")(config);
 
 // const knex = require("knex")({
 //   client: "pg",

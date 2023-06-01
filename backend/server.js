@@ -16,7 +16,7 @@ const knex = require("knex")(config);
 //     database: "pokemonsearch",
 //   },
 // });
-
+// cd frontend && npm install && npm run build && cd ../backend && npm install && npx knex migrate:latest --knexfile data/knexfile.js
 // CORS設定
 app.use(cors());
 const PORT = process.env.PORT || 8080;

@@ -41,13 +41,13 @@ module.exports = {
 		// },
 		migrations: {
 			directory: "./migrations",
+			tableName: "pokemon",
 		},
 		seeds: {
 			directory: "./seeds",
 		},
 	},
 };
-// tableName: "pokemon";
 
 // require("dotenv").config({
 //   path: "../.env",

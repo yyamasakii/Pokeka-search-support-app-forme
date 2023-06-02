@@ -41,6 +41,7 @@ module.exports = {
 		// },
 		migrations: {
 			directory: "./migrations",
+			tableName: "pokemon",
 		},
 		seeds: {
 			directory: "./seeds",

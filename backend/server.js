@@ -32,7 +32,7 @@ app.get("/api/poke", async (req, res) => {
 	// if (req.query === null) {
 	// knexでオブジェクトを作る----------
 	const AllPokemon = () => {
-		return knex.select("*").from("pokemon").limit(100);
+		return knex.queryBuilder().select("*").from("pokemon").limit(100);
 	};
 
 	const AllpokemonObj = await AllPokemon();

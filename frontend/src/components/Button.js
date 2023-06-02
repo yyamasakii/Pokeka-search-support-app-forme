@@ -6,9 +6,11 @@ import "../styles/button.css";
 // });
 console.log("ENV : ", process.env);
 const URL =
-	process.env.NODE_ENV == "development"
-		? "http://localhost:8080/api/poke"
-		: process.env.DATABASE_URL;
+	// process.env.NODE_ENV == "development"
+	// 	?
+	// 	"http://localhost:8080/api/poke"
+	// 	:
+	"https://pssa-u9wj.onrender.com/api/poke";
 export default function Button(props) {
 	const getAllPoke = async () => {
 		let result = [];

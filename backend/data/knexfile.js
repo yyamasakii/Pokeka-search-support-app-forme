@@ -41,10 +41,13 @@ module.exports = {
 		},
 		migrations: {
 			directory: "./migrations",
-			tableName: "pokemon",
+			tableName: "knex_migrations",
 		},
 		seeds: {
 			directory: "./seeds",
+		},
+		ssl: {
+			rejectUnauthorized: false,
 		},
 	},
 };

@@ -1,16 +1,18 @@
 import React from "react";
 import "../styles/button.css";
 // import _ from "lodash";
+require("dotenv").config({
+	path: "../.env",
+});
 const URL =
-	process.env.DATABASE_URL !== undefined
-		? `https://pssa-u9wj.onrender.com/api/poke`
-		: "http://localhost:8080/api/poke";
-
+	process.env.ENVIRONMENT == "development"
+		? "http://localhost:8080/api/poke"
+		: `https://pssa-u9wj.onrender.com/api/poke`;
 export default function Button(props) {
 	const getAllPoke = async () => {
 		let result = [];
 		console.log("ボタン押されたよ");
-		console.log("ENV : ", process.env.DATABASE_URL);
+		console.log("ENV : ", process.env.ENVIRONMENT);
 		console.log("URL : ", URL);
 		const pokeArray = await fetch(URL, { method: "GET" }); //.then((e) =>
 		result = await pokeArray.json();

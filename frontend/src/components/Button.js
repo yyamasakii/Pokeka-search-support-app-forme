@@ -13,12 +13,16 @@ const URL =
 	"https://pssa-u9wj.onrender.com/api/poke";
 export default function Button(props) {
 	const getAllPoke = async () => {
-		let result = [];
-		console.log("ボタン押されたよ");
-		console.log("URL : ", URL);
-		const pokeArray = await fetch(URL, { method: "GET" }); //.then((e) =>
-		result = await pokeArray.json();
-		props.resultNumSet(result);
+		// let result = [];
+		// console.log("ボタン押されたよ");
+		// // console.log("URL : ", URL);
+		// const pokeArray = await fetch("/api/poke"); //.then((e) =>
+		// result = await pokeArray.json();
+		// props.resultNumSet(result);
+		// console.log(result);
+		fetch("/api")
+			.then((res) => res.json())
+			.then((data) => console.log(data));
 	};
 
 	return (

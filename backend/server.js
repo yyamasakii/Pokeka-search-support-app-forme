@@ -23,7 +23,12 @@ const PORT = process.env.PORT || 8080;
 
 app.use("/", express.static("public"));
 
+app.get("/api", (req, res) => {
+	res.send("Hello World");
+});
+
 app.get("/api/poke", async (req, res) => {
+	console.log(req);
 	// if (req.query === null) {
 	// knexでオブジェクトを作る----------
 	const AllPokemon = () => {

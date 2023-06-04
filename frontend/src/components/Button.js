@@ -10,7 +10,7 @@ const URL =
 	// 	?
 	// 	"http://localhost:8080/api/poke"
 	// 	:
-	"https://pssa-u9wj.onrender.com/api/poke";
+	"https://pssa-api.onrender.com";
 export default function Button(props) {
 	const getAllPoke = async () => {
 		// let result = [];

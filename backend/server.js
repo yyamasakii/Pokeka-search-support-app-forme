@@ -4,7 +4,7 @@ const cors = require("cors");
 
 // const knex = require("./data/index");
 const environment = process.env.DATABASE_URL ? "production" : "development";
-const config = require("./data/knexfile")[environment];
+const config = require("./knexfile")[environment];
 const knex = require("knex")(config);
 
 // const knex = require("knex")({

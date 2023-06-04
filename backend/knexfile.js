@@ -40,11 +40,11 @@ module.exports = {
 			max: 10,
 		},
 		migrations: {
-			directory: "./migrations",
 			tableName: "knex_migration",
+			directory: "./data/db/migrations",
 		},
 		seeds: {
-			directory: "./seeds",
+			directory: "./data/db/seeds",
 		},
 		ssl: {
 			rejectUnauthorized: false,

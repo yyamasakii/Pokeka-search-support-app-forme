@@ -1,4 +1,4 @@
-const inputJSON = require("../cardData.json");
+const inputJSON = require("../../cardData.json");
 
 exports.seed = function (knex, Promise) {
 	return knex("pokemon")
